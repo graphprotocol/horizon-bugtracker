@@ -8,17 +8,44 @@ body:
       value: |
         Thank you for reporting an issue with the Graph Horizon upgrade. Please fill out the information below to help us investigate and resolve the problem.
 
-  - type: dropdown
-    id: component
+  - type: input
+    id: indexer-address
     attributes:
-      label: Affected Component
-      description: Which component is experiencing the issue?
-      options:
-        - Indexer Agent
-        - Indexer Service
-        - Indexer CLI
-        - TAP Agent
-        - Other
+      label: Indexer address
+      description: The address for the indexer
+    validations:
+      required: true
+
+  - type: input
+    id: operator-address
+    attributes:
+      label: Operator address
+      description: The address for the indexer's operator. Use 0x00 if not using an operator.
+    validations:
+      required: true
+
+  - type: input
+    id: indexer-agent-version
+    attributes:
+      label: Indexer agent version
+      description: The indexer agent version being used (e.g: v0.25.0)
+    validations:
+      required: true
+
+  - type: input
+    id: indexer-service-version
+    attributes:
+      label: Indexer service version
+      description: The indexer service version being used (e.g: v1.7.0)
+    validations:
+      required: true
+
+      
+  - type: input
+    id: tap-agent-version
+    attributes:
+      label: TAP agent version
+      description: The TAP agent version being used (e.g: v1.11.0)
     validations:
       required: true
 
@@ -40,21 +67,6 @@ body:
         1.
         2.
         3.
-    validations:
-      required: true
-
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      description: Information about your indexer setup
-      value: |
-        - Graph Node version:
-        - Indexer Agent version:
-        - Indexer Service version:
-        - TAP Agent version:
-        - Indexer address:
-        - Operator address:
     validations:
       required: true
 
