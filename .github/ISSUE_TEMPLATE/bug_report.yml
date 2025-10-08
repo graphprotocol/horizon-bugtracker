@@ -48,7 +48,7 @@ body:
     attributes:
       label: Environment
       description: Information about your indexer setup
-      placeholder: |
+      value: |
         - Graph Node version:
         - Indexer Agent version:
         - Indexer Service version:
