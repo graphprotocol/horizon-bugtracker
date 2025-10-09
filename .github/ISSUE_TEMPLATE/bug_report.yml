@@ -59,22 +59,8 @@ body:
       required: true
 
   - type: textarea
-    id: reproduction
-    attributes:
-      label: Steps to Reproduce
-      description: Detailed steps to reproduce the issue
-      placeholder: |
-        1.
-        2.
-        3.
-    validations:
-      required: true
-
-  - type: textarea
     id: logs
     attributes:
       label: Relevant Logs
       description: Please paste any relevant log output
       placeholder: Paste or upload relevant logs here...
-    validations:
-      required: true
